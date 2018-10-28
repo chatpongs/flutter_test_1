@@ -56,7 +56,7 @@ class Consent extends StatelessWidget {
                 ),
                 RaisedButton(
                   child: Text('ตกลง'),
-                  onPressed: () {},
+                  onPressed: () => Navigator.pushNamedAndRemoveUntil(context, '/questionair', (route) => false),
                 ),
               ],
             ),

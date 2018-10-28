@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './screens/home.dart';
 import './screens/consent.dart';
+import './screens/questionair.dart';
 
 class App extends StatelessWidget {
   @override
@@ -19,6 +20,7 @@ class App extends StatelessWidget {
       routes: {
         '/': (context) => Home(),
         '/consent': (context) => Consent(),
+        '/questionair': (context) => Questionair(),
       },
     );
   }
