@@ -49,10 +49,7 @@ class Home extends StatelessWidget {
           children: <Widget>[
             Text(
               'ที่มาของโครงการ',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22.0,
-              ),
+              style: Theme.of(context).textTheme.title,
             ),
             SizedBox(
               height: 20.0,

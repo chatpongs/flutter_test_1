@@ -33,6 +33,13 @@ class Consent extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            Text(
+              'ข้อตกลงในการใช้งาน',
+              style: Theme.of(context).textTheme.title,
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
             Container(
               decoration: BoxDecoration(
                 border: Border.all(),
