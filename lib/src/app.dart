@@ -11,6 +11,9 @@ class App extends StatelessWidget {
         buttonColor: Colors.purpleAccent,
         buttonTheme: ButtonThemeData(textTheme: ButtonTextTheme.primary),
         fontFamily: 'Kanit',
+        textTheme: TextTheme(
+          body1: TextStyle(fontSize: 16.0),
+        ),
       ),
       // home: Home(),
       routes: {

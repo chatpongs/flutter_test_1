@@ -1,35 +1,31 @@
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
-  @override
+  Widget _buildText(context) {
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+        color: Color.fromARGB(200, 255, 255, 255),
+      ),
+      padding: EdgeInsets.all(20.0),
+      child: Text(
+        'ไทยแลนด์แคนยอนมาร์ค บัตเตอร์เซาท์พรีเมียร์ ฟยอร์ด ออทิสติกสลัมเคลียร์บาร์บีคิว'
+            'อร์เกอร์ ซิมโฟนี่เบอร์เกอร์อีแต๋นมิลค์พันธุวิศวกรรม ฮัลโหลพรีเมียม แบคโฮปูอัด'
+            'อง โบว์ลิ่งโฟม วอลนัทโดมิโน วัจนะแอดมิสชันบิ๊กแดรี่นรีแพ',
+      ),
+    );
+  }
+
+  Widget _buildButton(context) {
+    return RaisedButton(
+      child: Text('ตกลง'),
+      onPressed: () {
+        Navigator.pushNamed(context, '/consent');
+      },
+    );
+  }
+
   Widget build(BuildContext context) {
-    Widget _buildText() {
-      return Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
-          color: Color.fromARGB(200, 255, 255, 255),
-        ),
-        padding: EdgeInsets.all(20.0),
-        child: Text(
-          'ไทยแลนด์แคนยอนมาร์ค บัตเตอร์เซาท์พรีเมียร์ ฟยอร์ด ออทิสติกสลัมเคลียร์บาร์บีคิว'
-          'อร์เกอร์ ซิมโฟนี่เบอร์เกอร์อีแต๋นมิลค์พันธุวิศวกรรม ฮัลโหลพรีเมียม แบคโฮปูอัด'
-          'อง โบว์ลิ่งโฟม วอลนัทโดมิโน วัจนะแอดมิสชันบิ๊กแดรี่นรีแพ',
-          style: TextStyle(
-            fontSize: 16.0,
-          ),
-        ),
-      );
-    }
-
-    Widget _buildButton() {
-      return RaisedButton(
-        child: Text('ตกลง'),
-        onPressed: () {
-          Navigator.pushNamed(context, '/consent');
-        },
-      );
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -61,11 +57,11 @@ class Home extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
-            _buildText(),
+            _buildText(context),
             SizedBox(
               height: 20.0,
             ),
-            _buildButton(),
+            _buildButton(context),
           ],
         ),
       ),
